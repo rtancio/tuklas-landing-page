@@ -14,6 +14,13 @@ export default function LandingPage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const socialLinks = {
+    facebook: 'https://facebook.com/tuklastravels',
+    instagram: 'https://instagram.com/tuklastravels',
+    twitter: 'https://twitter.com/tuklastravels',
+    linkedin: 'https://linkedin.com/company/tuklas-travel'
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
       {/* Navigation */}
@@ -43,6 +50,7 @@ export default function LandingPage() {
 
       {/* Hero Section */}
       <motion.section 
+        id="about"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -83,7 +91,7 @@ export default function LandingPage() {
       </motion.section>
 
       {/* Features Section */}
-      <section className="py-20 px-6 bg-gray-50">
+      <section id="experiences" className="py-20 px-6 bg-gray-50">
         <div className="container mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Why Travel with Tuklas?</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -108,6 +116,7 @@ export default function LandingPage() {
 
       {/* Mission Section */}
       <motion.section 
+        id="impact"
         className="py-20 px-6"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -135,7 +144,7 @@ export default function LandingPage() {
       </motion.section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-teal-600 text-white">
+      <section id="contact" className="py-20 px-6 bg-teal-600 text-white">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Start Your Journey?</h2>
           <p className="text-xl mb-8">Join us in creating meaningful travel experiences that make a difference.</p>
@@ -171,10 +180,10 @@ export default function LandingPage() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white">Facebook</a></li>
-              <li><a href="#" className="hover:text-white">Instagram</a></li>
-              <li><a href="#" className="hover:text-white">Twitter</a></li>
-              <li><a href="#" className="hover:text-white">LinkedIn</a></li>
+              <li><a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-white">Facebook</a></li>
+              <li><a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a></li>
+              <li><a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-white">Twitter</a></li>
+              <li><a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white">LinkedIn</a></li>
             </ul>
           </div>
           <div>
