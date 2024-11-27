@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import TuklasLogo from '../components/Logo';
 import FeatureCard from '../components/FeatureCard';
+import BlogSection from '../components/blog/BlogSection';
 
 export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,13 +15,6 @@ export default function LandingPage() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const socialLinks = {
-    facebook: 'https://facebook.com/tuklastravels',
-    instagram: 'https://instagram.com/tuklastravels',
-    twitter: 'https://twitter.com/tuklastravels',
-    linkedin: 'https://linkedin.com/company/tuklas-travel'
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 to-white">
@@ -36,6 +31,7 @@ export default function LandingPage() {
             <a href="#about" className="text-gray-600 hover:text-teal-600">About</a>
             <a href="#experiences" className="text-gray-600 hover:text-teal-600">Experiences</a>
             <a href="#impact" className="text-gray-600 hover:text-teal-600">Impact</a>
+            <Link to="/blog" className="text-gray-600 hover:text-teal-600">Blog</Link>
             <a href="#contact" className="text-gray-600 hover:text-teal-600">Contact</a>
           </div>
           <motion.button 
@@ -143,6 +139,9 @@ export default function LandingPage() {
         </div>
       </motion.section>
 
+      {/* Blog Section */}
+      <BlogSection />
+
       {/* CTA Section */}
       <section id="contact" className="py-20 px-6 bg-teal-600 text-white">
         <div className="container mx-auto text-center">
@@ -174,16 +173,17 @@ export default function LandingPage() {
               <li><a href="#about" className="hover:text-white">About Us</a></li>
               <li><a href="#experiences" className="hover:text-white">Experiences</a></li>
               <li><a href="#impact" className="hover:text-white">Our Impact</a></li>
+              <li><Link to="/blog" className="hover:text-white">Blog</Link></li>
               <li><a href="#contact" className="hover:text-white">Contact</a></li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <ul className="space-y-2 text-gray-400">
-              <li><a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-white">Facebook</a></li>
-              <li><a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a></li>
-              <li><a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="hover:text-white">Twitter</a></li>
-              <li><a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white">LinkedIn</a></li>
+              <li><a href="https://facebook.com/tuklastravels" target="_blank" rel="noopener noreferrer" className="hover:text-white">Facebook</a></li>
+              <li><a href="https://instagram.com/tuklastravels" target="_blank" rel="noopener noreferrer" className="hover:text-white">Instagram</a></li>
+              <li><a href="https://twitter.com/tuklastravels" target="_blank" rel="noopener noreferrer" className="hover:text-white">Twitter</a></li>
+              <li><a href="https://linkedin.com/company/tuklas-travel" target="_blank" rel="noopener noreferrer" className="hover:text-white">LinkedIn</a></li>
             </ul>
           </div>
           <div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <circle cx="256" cy="256" r="230" fill="#2A9D8F" />
+  <path d="M256 102 L256 332 M179 153 L333 153" 
+        stroke="#E9C46A" 
+        stroke-width="42" 
+        stroke-linecap="round"
+        fill="none" />
+  <path d="M153 281 A102 102 0 0 1 359 281" 
+        stroke="#F4A261" 
+        stroke-width="21" 
+        stroke-linecap="round"
+        fill="none" />
+  <circle cx="153" cy="281" r="16" fill="#E76F51" />
+  <circle cx="256" cy="307" r="16" fill="#E76F51" />
+  <circle cx="359" cy="281" r="16" fill="#E76F51" />
+</svg>
